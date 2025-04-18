@@ -33,11 +33,11 @@ struct PerspectiveEffectView: View {
 struct PerspectiveTiltRenderer: TextRenderer {
     var strength: Double
 
-    func draw(layout: Text.Layout, in context: inout GraphicsContext) {
+    func draw(layout: Text.Layout, in ctx: inout GraphicsContext) {
         for line in layout {
             for run in line {
                 if run[PerspectiveTiltAttribute.self] != nil {
-                    var copy = context
+                    var copy = ctx
 
                     copy.addFilter(.distortionShader(
                         ShaderLibrary.perspectiveTilt(
@@ -48,7 +48,7 @@ struct PerspectiveTiltRenderer: TextRenderer {
 
                     copy.draw(run)
                 } else {
-                    context.draw(run)
+                    ctx.draw(run)
                 }
             }
         }

@@ -10,6 +10,11 @@ import SwiftUI
 struct JumpAroundRenderer: TextRenderer {
 
     var moveAmount: Double
+    
+    var animatableData: Double {
+        get { moveAmount }
+        set { moveAmount = newValue }
+    }
 
     /// 波のようなテキストを描画する。
     ///

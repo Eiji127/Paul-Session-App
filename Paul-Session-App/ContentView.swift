@@ -49,8 +49,20 @@ struct ContentView: View {
                 }
 
                 Section {
-                    NavigationLink("✅ Set Perspective Effect to Text.") {
-
+                    NavigationLink("✅ Perspective Effect") {
+                        PerspectiveEffectView()
+                    }
+                    
+                    NavigationLink("✅ Water Effect") {
+                        WaterEffectView()
+                    }
+                    
+                    NavigationLink("✅ Grayscale Gradient Effect") {
+                        GrayscaleGradientEffectView()
+                    }
+                    
+                    NavigationLink("✅ Rainbow Gradient Effect") {
+                        RainbowGradientEffectView()
                     }
                 } header: {
                     Text("Use Metal")

@@ -29,6 +29,7 @@ struct HighlightRenderer: TextRenderer {
                         with: .color(color)
                     )
                 }
+                ctx.draw(run)
             }
         }
     }
